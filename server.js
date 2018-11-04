@@ -40,7 +40,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.get("/", (req, res) => {
-  res.status(200).send(database.users);
+  res.status(200).send("up and working");
 });
 
 app.post("/signin", (req, res) => {
