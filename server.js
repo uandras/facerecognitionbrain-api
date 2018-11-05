@@ -12,6 +12,7 @@ const register = require("./controllers/register.js");
 const signin = require("./controllers/signin.js");
 const profile = require("./controllers/profile.js");
 const image = require("./controllers/image.js");
+const PORT = process.env.PORT || 3000;
 
 //a knex függvény meghívásával inicializáljuk az adatbázist
 const db = knex({
@@ -63,8 +64,8 @@ app.post("/imageurl", (req, res) => {
   image.handleApiCall(req, res);
 });
 
-app.listen(process.env.PORT || 3000, () => {
-  console.log(`Server listening on port ${process.env.PORT}`);
+app.listen(PORT, () => {
+  console.log(`Server listening on port ${PORT}`);
 });
 
 /*
