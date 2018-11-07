@@ -22,10 +22,11 @@ const db = knex({
   client: "pg",
   connection: {
     //host: "127.0.0.1",
+    //user: "uatest",
+    //password: "123",
+    //database: "smartbrain"
     host: "postgresql-tetrahedral-56126",
-    user: "uatest",
-    password: "123",
-    database: "smartbrain"
+    ssl: true
   }
 });
 
