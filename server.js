@@ -25,10 +25,14 @@ const db = knex({
     //user: "uatest",
     //password: "123",
     //database: "smartbrain"
-    host: "postgresql-tetrahedral-56126",
+
+    //innentől a heroku-related adatbázis kapcsolat
+    connectionString: process.env.DATABASE_URL,
     ssl: true
   }
 });
+
+console.log(db);
 
 //a következő kikommentezett blokk egy példa a select-re
 /*
