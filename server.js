@@ -2,6 +2,9 @@
 // - don't have to do everything in server.js (see "controllers" folder)
 //      but, beware to pass all the parameters needed (p.e.: db, bcrypt)
 
+//heroku link:
+//https://glacial-woodland-77484.herokuapp.com/
+
 const express = require("express");
 const bodyParser = require("body-parser"); //ez kell a json küldemények parse-olásához
 const bcrypt = require("bcrypt");
@@ -18,7 +21,8 @@ const PORT = process.env.PORT || 3000;
 const db = knex({
   client: "pg",
   connection: {
-    host: "127.0.0.1",
+    //host: "127.0.0.1",
+    host: "postgresql-tetrahedral-56126",
     user: "uatest",
     password: "123",
     database: "smartbrain"
